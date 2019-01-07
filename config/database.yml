@@ -1,0 +1,17 @@
+default: &default
+  adapter: mysql2
+  pool: 5
+  timeout: 5000
+  username: root
+
+development:
+  <<: *default
+  database: hackernews_dev
+
+test:
+  <<: *default
+  database: hackernews_test
+
+production:
+  <<: *default
+  database: hackernews_prd
